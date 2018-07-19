@@ -182,6 +182,7 @@ body {
   position: relative;
   font: 500 16px 'Fira Sans', Arial, Helvetica, sans-serif;
   letter-spacing: 0.4px;
+  min-width: 1680px;
 }
 a {
   color: inherit;
@@ -200,10 +201,25 @@ a {
 .dot.green:before {
   background: #80be7c;
 }
+.post > .title {
+  font-size: 18px;
+  margin: 0 0 0.5em 0;
+}
+.post > .meta {
+  font-size: 12px;
+}
+.post i {
+  color: #b4b4b4;
+  margin: 0 0.5em;
+}
+.post > .body {
+  line-height: 1.57142857;
+  font-size: 14px;
+}
 .float-bar {
   background: #981217;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   color: #fff;
   width: 80px;
   top: 0;
@@ -312,9 +328,43 @@ a {
   min-height: 550px;
   background: #000;
 }
+.content .trending {
+  display: flex;
+  min-height: 640px;
+}
+.content .trending .hero {
+  background: #c0c0c0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+.content .trending .hero * {
+  display: none;
+}
+.content .trending .popular {
+  flex: 0 0 500px;
+  overflow: hidden;
+}
+.content .trending .popular > .title {
+  padding: 28px 31px;
+  margin: 0;
+  font-size: 24px;
+  border-bottom: 1px solid rgba(219, 219, 219, 0.7);
+}
+.content .trending .popular .post-list {
+  padding: 28px 31px;
+}
+.content .trending .popular .post-list .post .body {
+  font-size: 16px;
+}
+.content .trending .popular .post-list .post .title {
+  font-size: 20px;
+}
+.content .trending .popular .post-list .post + .post {
+  margin-top: 2.5em;
+}
 .menu-bar {
   width: 270px;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   bottom: 0;

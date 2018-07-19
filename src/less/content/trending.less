@@ -1,0 +1,36 @@
+.trending{
+  display: flex;
+  min-height: 640px;
+  .hero{
+    background: #c0c0c0; //TODO: Add BG
+    flex: 1 1 auto;
+    overflow: hidden;
+    *{
+      display: none;
+    }
+  }
+  .popular{
+    flex: 0 0 500px;
+    overflow: hidden;
+    &>.title{
+      padding: 28px 31px;
+      margin: 0;
+      font-size: 24px;
+      border-bottom: 1px solid fade(@color-white-five, 70%);
+    }
+    .post-list{
+      padding: 28px 31px;
+      .post{
+        .body{
+          font-size: 16px;
+        }
+        .title{
+          font-size: 20px;
+        }
+      }
+      .post+.post{
+        margin-top: 2.5em;
+      }
+    }
+  }
+}

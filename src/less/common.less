@@ -3,6 +3,7 @@ body{
   position: relative;
   font: 500 16px @font-sans;
   letter-spacing: 0.4px;
+  min-width: 1680px;
 }
 
 a{
@@ -24,4 +25,28 @@ a{
   &.green:before{
     background: @color-faded-green;
   }
+}
+
+.post{
+
+  &>.title{
+    font-size: 18px;
+    margin: 0 0 0.5em 0;
+  }
+  &>.meta{
+    font-size: 12px;
+
+
+  }
+  i{
+    //TODO: Replace with class name
+    color: @color-greyish;
+    margin: 0 0.5em;
+  }
+
+  &>.body{
+    line-height: 22/14;
+    font-size: 14px;
+  }
+
 }
