@@ -308,6 +308,10 @@ a {
   color: #b4b4b4;
   margin: 0 0.5em;
 }
+.content .footer {
+  min-height: 550px;
+  background: #000;
+}
 .menu-bar {
   width: 270px;
   position: fixed;
