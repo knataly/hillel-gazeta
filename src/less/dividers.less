@@ -1,0 +1,28 @@
+.divider{
+  display: flex;
+  &.horizontal{
+    flex-direction: row;
+  }
+  &.vertical{
+    flex-direction: column;
+  }
+  &>.divided{
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    &.one-quarter{
+      flex: 0 0 25%;
+    }
+    &.three-quarters{
+      flex: 0 0 75%;
+    }
+    &.two-quarters, &.one-half{
+      flex: 0 0 50%;
+    }
+    &.one-third{
+      flex: 0 0 33.33333%;
+    }
+    &.two-thirds{
+      flex: 0 0 66.66666%;
+    }
+  }
+}

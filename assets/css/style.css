@@ -216,6 +216,35 @@ a {
   line-height: 1.57142857;
   font-size: 14px;
 }
+.divider {
+  display: flex;
+}
+.divider.horizontal {
+  flex-direction: row;
+}
+.divider.vertical {
+  flex-direction: column;
+}
+.divider > .divided {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+.divider > .divided.one-quarter {
+  flex: 0 0 25%;
+}
+.divider > .divided.three-quarters {
+  flex: 0 0 75%;
+}
+.divider > .divided.two-quarters,
+.divider > .divided.one-half {
+  flex: 0 0 50%;
+}
+.divider > .divided.one-third {
+  flex: 0 0 33.33333%;
+}
+.divider > .divided.two-thirds {
+  flex: 0 0 66.66666%;
+}
 .float-bar {
   background: #981217;
   flex-direction: column;
@@ -361,6 +390,73 @@ a {
 }
 .content .trending .popular .post-list .post + .post {
   margin-top: 2.5em;
+}
+.content .greypost {
+  background: #dcdcdc;
+  padding: 30px;
+  border: 1px solid #cfcfcf;
+}
+.content .bigpost {
+  color: #fff;
+  background: #c0c0c0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.content .bigpost > .post {
+  padding: 230px 32px 30px 32px;
+}
+.content .bigpost > .post > .title {
+  font-size: 44px;
+  padding-top: 38px;
+  position: relative;
+}
+.content .bigpost > .post > .title::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 33.333%;
+  position: absolute;
+  background: #981217;
+  top: 0;
+  left: 0;
+}
+.content .bigpost > .post > .meta {
+  font-size: 12px;
+}
+.content .bigpost > .post > .body {
+  font-size: 16px;
+}
+.content .bigpost > .post .icon {
+  color: #fff;
+  opacity: 0.5;
+}
+.content .bigpost > * {
+  z-index: 1;
+}
+.content .bigpost .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  z-index: 0;
+}
+.content .bigpost .post {
+  position: relative;
+}
+.content .bigpost .buttons {
+  text-align: center;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.content .bigpost .buttons .divided {
+  padding: 28px;
+}
+.content .bigpost .buttons .divided + .divided {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 .menu-bar {
   width: 270px;

@@ -1,0 +1,70 @@
+.greypost{
+  background: @color-white-three;
+  padding: 30px;
+  border: 1px solid darken(@color-white-three, 5%);
+}
+.bigpost{
+  color: #fff;
+  background: #c0c0c0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &>.post{
+    padding: 230px 32px 30px 32px;
+    &>.title{
+      font-size: 44px;
+      padding-top: 38px;
+      position: relative;
+      &::after{
+        content:'';
+        display: block;
+        height: 4px;
+        width: 33.333%;
+        position: absolute;
+        background: @color-dark-red;
+        top: 0;
+        left: 0;
+      }
+    }
+    &>.meta{
+      font-size: 12px;
+    }
+    &>.body{
+      font-size: 16px;
+    }
+
+    .icon{
+      color: #fff;
+      opacity: 0.5;
+    }
+  }
+  &>*{
+    z-index: 1;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .post{
+    position: relative;
+  }
+  .buttons{
+    text-align: center;
+    position: relative;
+    @border-color: fade(#fff, 10%);
+    border-top:1px solid @border-color;
+    .divided{ //TODO: Создать отдельный класс
+      padding: 28px;
+    }
+    .divided+.divided{
+      border-left:1px solid @border-color;
+    }
+  }
+}
